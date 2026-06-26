@@ -138,6 +138,8 @@ function renderCards(data){
       stats: copyL? [
         ["Open positions", copyL.open_positions],
         ["Copies total", copyL.copies_total],
+        ["Win rate", copyL.win_rate==null ? "—" : Math.round(copyL.win_rate*100)+"%"],
+        ["Resolved W/L", (copyL.wins??0)+" / "+(copyL.losses??0)],
         ["Avg slippage", (copyL.avg_slippage>=0?"+":"")+copyL.avg_slippage],
         ["Realised", gbp(copyL.realised_gbp)],
       ] : []},
@@ -279,10 +281,27 @@ async function init(){
     ? `Last snapshot: ${new Date(latestTs*1000).toLocaleString("en-GB")} · 8-week bake-off`
     : "No data yet — run python3 maverick.py / scanner.py / scanner_combo.py, or enable the GitHub Action.";
   renderCards(data);
+  renderHaltBanner(last(data.copy));
   renderBakeoff(data);
   renderEquity(data);
   renderGapChart(data);
   renderCopyDetail(copyState, last(data.copy));
+}
+
+function renderHaltBanner(copyL){
+  const cardsEl = document.getElementById("cards");
+  let b = document.getElementById("haltBanner");
+  if(copyL && copyL.halted){
+    if(!b){
+      b = document.createElement("div");
+      b.id = "haltBanner"; b.className = "note";
+      b.style.borderColor = "var(--red)"; b.style.color = "var(--red)";
+      b.style.marginBottom = "20px";
+      cardsEl.parentNode.insertBefore(b, cardsEl);
+    }
+    b.innerHTML = "⛔ <b>Copy bot circuit breaker tripped</b> — equity fell ≥10% from its peak. "
+      + "New entries are halted (exits still run). Delete <code>data/HALTED.flag</code> in the repo to resume.";
+  } else if(b){ b.remove(); }
 }
 init();
 </script>
