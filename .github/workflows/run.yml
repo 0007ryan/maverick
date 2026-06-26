@@ -1,6 +1,6 @@
 name: maverick-paper-run
 
-# Runs all three Maverick strategies in the cloud every 30 minutes (free)
+# Runs all four Maverick strategies in the cloud every 30 minutes (free)
 # and commits every snapshot. No secrets, no keys — read-only public data.
 
 on:
@@ -38,6 +38,10 @@ jobs:
       - name: Combinatorial arb scanner
         continue-on-error: true
         run: python3 scanner_combo.py
+
+      - name: Random control (monkey baseline)
+        continue-on-error: true
+        run: python3 control.py
 
       - name: Commit snapshots
         run: |
