@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1231.9,
+  "cash_usd": 1219.2,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.891,
-      "value_usd": 6.44
+      "last_price": 0.925,
+      "value_usd": 6.69
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -16,8 +16,8 @@
       "entry_price": 0.35,
       "q": "Norway vs. France: O/U 2.5",
       "outcome": "Under",
-      "last_price": 0.34,
-      "value_usd": 6.17
+      "last_price": 0.35,
+      "value_usd": 6.35
     },
     "51519876214140449660166550584440656906007152566889523395451234960389805633766": {
       "shares": 105.83333333333333,
@@ -43,8 +43,8 @@
       "entry_price": 0.137,
       "q": "Will Elon Musk post 220-239 tweets from June 19 to June 26, 2026?",
       "outcome": "Yes",
-      "last_price": 0.133,
-      "value_usd": 6.16
+      "last_price": null,
+      "value_usd": 6.35
     },
     "64633878657285576959137539510148623306180117167578279928823970791829387927888": {
       "shares": 8.58108108108108,
@@ -54,8 +54,26 @@
       "outcome": "No",
       "last_price": 0.73,
       "value_usd": 6.26
+    },
+    "31752155862447409149067389255977203243895111018202743434902043543164266789354": {
+      "shares": 23.518518518518515,
+      "cost_usd": 6.35,
+      "entry_price": 0.27,
+      "q": "Will Uruguay vs. Spain end in a draw?",
+      "outcome": "Yes",
+      "last_price": 0.26,
+      "value_usd": 6.11
+    },
+    "49523822707420168111740490726614521109873901781183201069124677461866771930172": {
+      "shares": 15.487804878048781,
+      "cost_usd": 6.35,
+      "entry_price": 0.41,
+      "q": "Spread: Senegal (-1.5)",
+      "outcome": "Iraq",
+      "last_price": 0.4,
+      "value_usd": 6.2
     }
   },
-  "picks_total": 6,
+  "picks_total": 8,
   "first_run_done": true
 }
