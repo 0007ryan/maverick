@@ -1,0 +1,52 @@
+name: maverick-paper-run
+
+# Runs all three Maverick strategies in the cloud every 30 minutes (free)
+# and commits every snapshot. No secrets, no keys — read-only public data.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch: {}       # lets you trigger a run manually too
+
+permissions:
+  contents: write             # needed so it can commit the data files back
+
+concurrency:
+  group: maverick-run
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Each strategy is independent. continue-on-error means a transient
+      # Polymarket API hiccup in one won't stop the others snapshotting.
+      - name: Copy bot
+        continue-on-error: true
+        run: python3 maverick.py
+
+      - name: Intra-market arb scanner
+        continue-on-error: true
+        run: python3 scanner.py
+
+      - name: Combinatorial arb scanner
+        continue-on-error: true
+        run: python3 scanner_combo.py
+
+      - name: Commit snapshots
+        run: |
+          git config user.name  "maverick-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No change this run."
+          else
+            git commit -m "maverick snapshot $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
