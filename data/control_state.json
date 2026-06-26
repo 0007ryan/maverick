@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1206.5,
+  "cash_usd": 1193.8,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.931,
-      "value_usd": 6.73
+      "last_price": 0.929,
+      "value_usd": 6.72
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -16,8 +16,8 @@
       "entry_price": 0.35,
       "q": "Norway vs. France: O/U 2.5",
       "outcome": "Under",
-      "last_price": 0.35,
-      "value_usd": 6.35
+      "last_price": 0.0,
+      "value_usd": 0.0
     },
     "51519876214140449660166550584440656906007152566889523395451234960389805633766": {
       "shares": 105.83333333333333,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.81,
-      "value_usd": 6.34
+      "last_price": 0.8,
+      "value_usd": 6.26
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -52,8 +52,8 @@
       "entry_price": 0.74,
       "q": "Will Uruguay vs. Spain end in a draw?",
       "outcome": "No",
-      "last_price": 0.73,
-      "value_usd": 6.26
+      "last_price": 0.72,
+      "value_usd": 6.18
     },
     "31752155862447409149067389255977203243895111018202743434902043543164266789354": {
       "shares": 23.518518518518515,
@@ -61,8 +61,8 @@
       "entry_price": 0.27,
       "q": "Will Uruguay vs. Spain end in a draw?",
       "outcome": "Yes",
-      "last_price": 0.26,
-      "value_usd": 6.11
+      "last_price": 0.27,
+      "value_usd": 6.35
     },
     "49523822707420168111740490726614521109873901781183201069124677461866771930172": {
       "shares": 15.487804878048781,
@@ -70,8 +70,8 @@
       "entry_price": 0.41,
       "q": "Spread: Senegal (-1.5)",
       "outcome": "Iraq",
-      "last_price": 0.4,
-      "value_usd": 6.2
+      "last_price": 0.21,
+      "value_usd": 3.25
     },
     "52986718774908357330412653486471347449818893503063830313445318937088822580057": {
       "shares": 6.71957671957672,
@@ -79,7 +79,7 @@
       "entry_price": 0.945,
       "q": "Will Brazil win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.944,
+      "last_price": 0.943,
       "value_usd": 6.34
     },
     "89969054941820905260983372139923320038115693660830083208242956669285748681379": {
@@ -88,10 +88,28 @@
       "entry_price": 0.85,
       "q": "Will Argentina win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.84,
-      "value_usd": 6.28
+      "last_price": 0.83,
+      "value_usd": 6.2
+    },
+    "40296626793329341262569925559086532548886624004054207613333294427643418799438": {
+      "shares": 11.339285714285712,
+      "cost_usd": 6.35,
+      "entry_price": 0.56,
+      "q": "Norway vs. France: Norway O/U 1.5",
+      "outcome": "Under",
+      "last_price": 0.53,
+      "value_usd": 6.01
+    },
+    "75426118790615600884706845933427146354864211195995645345528102216770334829169": {
+      "shares": 8.14102564102564,
+      "cost_usd": 6.35,
+      "entry_price": 0.78,
+      "q": "Spread: France (-1.5)",
+      "outcome": "France",
+      "last_price": 0.77,
+      "value_usd": 6.27
     }
   },
-  "picks_total": 10,
+  "picks_total": 12,
   "first_run_done": true
 }
