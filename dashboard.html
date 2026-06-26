@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAVERICK — paper trading bake-off</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0a0e14; --panel:#121823; --panel2:#0f1520; --line:#1e2a3a;
+    --ink:#e6edf3; --dim:#8b9bb0; --faint:#5b6b80;
+    --green:#3fb950; --red:#f85149; --amber:#d29922; --blue:#58a6ff; --violet:#bc8cff;
+    --copy:#58a6ff; --intra:#3fb950; --combo:#bc8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+  header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  h1{font-size:26px;margin:0;letter-spacing:.5px}
+  .tag{color:var(--dim);font-size:13px}
+  .sub{color:var(--faint);font-size:13px;margin:6px 0 22px}
+  .bakeoff{display:flex;align-items:center;gap:12px;margin:0 0 26px;
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+  .bakeoff .bar{flex:1;height:8px;background:var(--panel2);border-radius:6px;overflow:hidden}
+  .bakeoff .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--violet))}
+  .bakeoff b{font-variant-numeric:tabular-nums}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
+  @media(max-width:780px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;
+    position:relative;overflow:hidden}
+  .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+  .card.copy:before{background:var(--copy)} .card.intra:before{background:var(--intra)}
+  .card.combo:before{background:var(--combo)}
+  .card .name{font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px}
+  .card .role{font-size:12px;color:var(--faint);margin-top:2px;min-height:30px}
+  .card .equity{font-size:30px;font-weight:600;margin:14px 0 2px;font-variant-numeric:tabular-nums}
+  .card .pnl{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .pos{color:var(--green)} .neg{color:var(--red)} .flat{color:var(--dim)}
+  .stats{margin-top:14px;border-top:1px solid var(--line);padding-top:12px;
+    display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+  .stat .k{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.5px}
+  .stat .v{font-size:16px;font-variant-numeric:tabular-nums;margin-top:1px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 10px;margin-bottom:26px}
+  .panel h2{font-size:14px;margin:0 0 14px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px;font-weight:600}
+  .chartbox{position:relative;height:320px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{color:var(--faint);font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.5px}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .truncate{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .empty{color:var(--faint);font-style:italic;padding:14px 4px}
+  .note{color:var(--faint);font-size:13px;line-height:1.6;background:var(--panel2);
+    border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  footer{color:var(--faint);font-size:12px;margin-top:28px;text-align:center}
+  footer code{color:var(--dim)}
+  .updated{color:var(--dim);font-size:12px}
+  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;
+    border:1px solid var(--line);color:var(--dim);margin-left:8px;text-transform:none;letter-spacing:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>MAVERICK <span style="font-size:22px">🛩️</span></h1>
+    <span class="tag">paper trading-research bake-off · £1,000 virtual · no money at risk</span>
+  </header>
+  <div class="sub" id="updated"></div>
+
+  <div class="bakeoff">
+    <span>Bake-off</span>
+    <div class="bar"><i id="bakebar" style="width:0%"></i></div>
+    <b id="bakelabel">week 0 / 8</b>
+  </div>
+
+  <div class="grid" id="cards"></div>
+
+  <div class="panel">
+    <h2>Equity over time — £1,000 start</h2>
+    <div class="chartbox"><canvas id="equityChart"></canvas></div>
+  </div>
+
+  <div class="panel">
+    <h2>Copy bot — slippage &amp; open positions <span class="pill" id="copyMeta"></span></h2>
+    <div id="copyDetail"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Scanners — gaps found vs. gaps you could actually fill</h2>
+    <div class="chartbox" style="height:260px"><canvas id="gapChart"></canvas></div>
+  </div>
+
+  <div class="note" id="backdrop">
+    <b>The honest backdrop.</b> Only ~12.7% of Polymarket users are profitable. Liquid arbitrage
+    is essentially gone — the tightest intra-market sum seen so far was 1.001 (a toll, not a profit).
+    This stack runs three strategies with fake money to find out whether <i>any</i> edge survives fees
+    before a single real penny is at risk. The number that matters for the copy bot is average
+    slippage: if it stays clearly positive, the "always late" tax is real and copying is dead.
+  </div>
+
+  <footer>Reads <code>data/snapshots.json</code>, <code>data/scanner_snapshots.json</code>,
+    <code>data/combo_snapshots.json</code> · refresh the page for the latest committed snapshot ·
+    not financial advice, a learning tool.</footer>
+</div>
+
+<script>
+const FILES = {
+  copy:  "data/snapshots.json",
+  intra: "data/scanner_snapshots.json",
+  combo: "data/combo_snapshots.json",
+  copyState:  "data/state.json",
+};
+const COLORS = {copy:"#58a6ff", intra:"#3fb950", combo:"#bc8cff"};
+const START = 1000;
+const FX = 1.27;
+const gbp = n => "£" + (n==null?"—":Number(n).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2}));
+const cls = n => n>0?"pos":n<0?"neg":"flat";
+
+async function loadJSON(path){
+  try{ const r = await fetch(path,{cache:"no-store"}); if(!r.ok) return null; return await r.json(); }
+  catch(e){ return null; }
+}
+const last = arr => (Array.isArray(arr)&&arr.length)?arr[arr.length-1]:null;
+
+function pnlSpan(v){
+  const c = cls(v);
+  const s = (v>0?"+£":v<0?"−£":"£") + Math.abs(v).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
+  return `<span class="pnl ${c}">${s}</span>`;
+}
+
+function renderCards(data){
+  const copyL = last(data.copy), intraL = last(data.intra), comboL = last(data.combo);
+  const cards = [
+    {k:"copy", name:"Copy bot", role:"maverick.py · follows top 40 by profit, £5 flat",
+      eq: copyL? copyL.equity_gbp : START,
+      pnl: copyL? copyL.pnl_gbp : 0,
+      stats: copyL? [
+        ["Open positions", copyL.open_positions],
+        ["Copies total", copyL.copies_total],
+        ["Avg slippage", (copyL.avg_slippage>=0?"+":"")+copyL.avg_slippage],
+        ["Realised", gbp(copyL.realised_gbp)],
+      ] : []},
+    {k:"intra", name:"Intra-market arb", role:"scanner.py · YES+NO < £1 in one market",
+      eq: intraL? intraL.equity_gbp : START,
+      pnl: intraL? intraL.equity_gbp-START : 0,
+      stats: intraL? [
+        ["Markets scanned", intraL.scanned],
+        ["Sub-£1 gaps", intraL.theoretical_gaps],
+        ["Clear fees", intraL.capturable_gaps],
+        ["Locked profit", gbp(intraL.locked_profit_gbp)],
+      ] : []},
+    {k:"combo", name:"Combinatorial arb", role:"scanner_combo.py · negRisk legs sum < £1",
+      eq: comboL? comboL.equity_gbp : START,
+      pnl: comboL? comboL.equity_gbp-START : 0,
+      stats: comboL? [
+        ["Events scanned", comboL.events_scanned],
+        ["Sub-£1 gaps", comboL.theoretical_gaps],
+        ["Clear fees", comboL.capturable_gaps],
+        ["Locked profit", gbp(comboL.locked_profit_gbp)],
+      ] : []},
+  ];
+  document.getElementById("cards").innerHTML = cards.map(c=>`
+    <div class="card ${c.k}">
+      <div class="name">${c.name}</div>
+      <div class="role">${c.role}</div>
+      <div class="equity">${gbp(c.eq)}</div>
+      <div>${pnlSpan(c.pnl)} <span class="flat" style="font-size:12px"> vs £1,000 start</span></div>
+      <div class="stats">
+        ${c.stats.length? c.stats.map(s=>`<div class="stat"><div class="k">${s[0]}</div><div class="v">${s[1]}</div></div>`).join("")
+          : `<div class="empty" style="grid-column:1/3">Waiting for first run…</div>`}
+      </div>
+    </div>`).join("");
+}
+
+function renderBakeoff(data){
+  const all = [...(data.copy||[]),...(data.intra||[]),...(data.combo||[])].map(s=>s.ts).filter(Boolean);
+  if(!all.length) return;
+  const start = Math.min(...all), nowTs = Math.max(...all, Math.floor(Date.now()/1000));
+  const weeks = Math.min(8, (nowTs-start)/(7*86400));
+  const pct = Math.max(0,Math.min(100, weeks/8*100));
+  document.getElementById("bakebar").style.width = pct+"%";
+  document.getElementById("bakelabel").textContent = `week ${weeks.toFixed(1)} / 8`;
+}
+
+let equityChart, gapChart;
+const tsTick = v => new Date(v*1000).toLocaleDateString("en-GB",{day:"2-digit",month:"short"});
+
+function renderEquity(data){
+  const mk = arr => (arr||[]).map(s=>({x:s.ts, y:s.equity_gbp}));
+  const ds = [
+    {label:"Copy bot", data:mk(data.copy), color:COLORS.copy},
+    {label:"Intra-market arb", data:mk(data.intra), color:COLORS.intra},
+    {label:"Combinatorial arb", data:mk(data.combo), color:COLORS.combo},
+  ].filter(d=>d.data.length);
+  const ctx = document.getElementById("equityChart");
+  if(equityChart) equityChart.destroy();
+  if(!ds.length){ ctx.parentElement.innerHTML = '<div class="empty">No snapshots yet — run the bots or wait for the GitHub Action.</div>'; return; }
+  equityChart = new Chart(ctx,{
+    type:"line",
+    data:{datasets: ds.map(d=>({
+      label:d.label, data:d.data, borderColor:d.color, backgroundColor:d.color+"22",
+      borderWidth:2, pointRadius:0, pointHoverRadius:4, tension:.25, fill:false}))},
+    options:{
+      responsive:true, maintainAspectRatio:false, interaction:{mode:"index",intersect:false},
+      plugins:{
+        legend:{labels:{color:"#8b9bb0",usePointStyle:true,boxWidth:8}},
+        tooltip:{callbacks:{title:i=>tsTick(i[0].parsed.x),
+          label:c=>` ${c.dataset.label}: £${c.parsed.y.toFixed(2)}`}}
+      },
+      scales:{
+        x:{type:"linear",ticks:{color:"#5b6b80",callback:tsTick,maxRotation:0,autoSkip:true,maxTicksLimit:8},
+           grid:{color:"#1e2a3a"}},
+        y:{ticks:{color:"#5b6b80",callback:v=>"£"+v},grid:{color:"#1e2a3a"},
+           suggestedMin:START-25, suggestedMax:START+25}
+      }
+    }
+  });
+}
+
+function renderGapChart(data){
+  const tail = a => (a||[]).slice(-12);
+  const intra=tail(data.intra), combo=tail(data.combo);
+  const ctx=document.getElementById("gapChart");
+  if(gapChart) gapChart.destroy();
+  if(!intra.length && !combo.length){ ctx.parentElement.innerHTML='<div class="empty">No scanner snapshots yet.</div>'; return; }
+  const src = intra.length>=combo.length? intra: combo;
+  const labels=[], theo=[], cap=[];
+  src.forEach((s,i)=>{
+    labels.push(tsTick(s.ts));
+    theo.push((intra[i]?.theoretical_gaps||0)+(combo[i]?.theoretical_gaps||0));
+    cap.push((intra[i]?.capturable_gaps||0)+(combo[i]?.capturable_gaps||0));
+  });
+  gapChart=new Chart(ctx,{
+    type:"bar",
+    data:{labels,datasets:[
+      {label:"Theoretical gaps (before fees)",data:theo,backgroundColor:"#d2992288",borderColor:"#d29922",borderWidth:1},
+      {label:"Capturable (clears fees)",data:cap,backgroundColor:"#3fb95088",borderColor:"#3fb950",borderWidth:1},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{labels:{color:"#8b9bb0",usePointStyle:true,boxWidth:8}}},
+      scales:{x:{ticks:{color:"#5b6b80",maxRotation:0,autoSkip:true,maxTicksLimit:8},grid:{display:false}},
+        y:{beginAtZero:true,ticks:{color:"#5b6b80",precision:0},grid:{color:"#1e2a3a"}}}}
+  });
+}
+
+function renderCopyDetail(state, copyL){
+  const meta = document.getElementById("copyMeta");
+  const box = document.getElementById("copyDetail");
+  if(copyL) meta.textContent = `avg slippage ${(copyL.avg_slippage>=0?"+":"")}${copyL.avg_slippage} over ${copyL.copies_total} copies`;
+  const pos = state && state.positions ? Object.values(state.positions) : [];
+  if(!pos.length){ box.innerHTML='<div class="empty">No open positions.</div>'; return; }
+  box.innerHTML = `<table><thead><tr>
+      <th>Market</th><th>Outcome</th><th>Leader</th>
+      <th class="num">Entry</th><th class="num">Last</th>
+      <th class="num">Cost £</th><th class="num">Value £</th></tr></thead><tbody>${
+    pos.map(p=>{
+      const cost=(p.cost_usd/FX), val=(p.value_usd!=null?p.value_usd/FX:cost);
+      const pl=val-cost;
+      return `<tr>
+        <td class="truncate" title="${(p.title||'').replace(/"/g,'&quot;')}">${p.title||'—'}</td>
+        <td>${p.outcome||'—'}</td><td>${p.leader||'—'}</td>
+        <td class="num">${p.entry_price!=null?Number(p.entry_price).toFixed(3):'—'}</td>
+        <td class="num">${p.last_price!=null?Number(p.last_price).toFixed(3):'—'}</td>
+        <td class="num">${cost.toFixed(2)}</td>
+        <td class="num ${cls(pl)}">${val.toFixed(2)}</td></tr>`;
+    }).join("")
+  }</tbody></table>`;
+}
+
+async function init(){
+  const [copy,intra,combo,copyState] = await Promise.all([
+    loadJSON(FILES.copy), loadJSON(FILES.intra), loadJSON(FILES.combo), loadJSON(FILES.copyState)
+  ]);
+  const data = {copy:copy||[], intra:intra||[], combo:combo||[]};
+  const anyData = data.copy.length||data.intra.length||data.combo.length;
+  const latestTs = Math.max(0,...[...data.copy,...data.intra,...data.combo].map(s=>s.ts||0));
+  document.getElementById("updated").textContent = anyData && latestTs
+    ? `Last snapshot: ${new Date(latestTs*1000).toLocaleString("en-GB")} · 8-week bake-off`
+    : "No data yet — run python3 maverick.py / scanner.py / scanner_combo.py, or enable the GitHub Action.";
+  renderCards(data);
+  renderBakeoff(data);
+  renderEquity(data);
+  renderGapChart(data);
+  renderCopyDetail(copyState, last(data.copy));
+}
+init();
+</script>
+</body>
+</html>
