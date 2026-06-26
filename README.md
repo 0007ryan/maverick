@@ -1,9 +1,9 @@
 # MAVERICK 🛩️
 
 A **paper** trading-research stack for Polymarket. No money, no wallet, no API
-keys, nothing custodial. It pretends you put **£1,000** in and runs three
-different strategies side by side for **8 weeks** — a bake-off — so you can see
-which (if any) actually clears the bar before a single real penny is at risk.
+keys, nothing custodial. It pretends you put **£1,000** in and runs several
+strategies side by side for **8 weeks** — a bake-off — so you can see which (if
+any) actually clears the bar before a single real penny is at risk.
 
 ---
 
@@ -30,6 +30,20 @@ gap. Below our fee hurdle, but it points at where edge hides: slow multi-leg
 markets, not sports.* Deliberately does **not** guess logical links from
 wording — that's how you invent fake arbs.
 
+**4. `control.py` — the Random monkey (the benchmark)**
+Each run it buys £5 of a **random** outcome in a few random liquid markets and
+holds to resolution — same bankroll, same rails, zero skill. It exists so the
+8-week result is a *measurement*, not a story: if the copy bot or the scanners
+can't clearly beat the monkey, what looked like edge was just luck.
+
+## Safety layer (copy bot)
+`maverick.py` carries circuit breakers, independent of the strategy: a daily-loss
+stop (−5% on the day pauses new entries; exits still run) and a max-drawdown
+kill-switch (−10% from peak halts entries and writes `data/HALTED.flag`; delete
+that file to resume, which re-baselines the peak). It also tracks **win rate**,
+ignores the leaders' sub-£5 noise trades, and logs skipped/failed counts. These
+run on paper, but prove the mechanism before any real money.
+
 ## The honest backdrop
 Only ~12.7% of Polymarket users are profitable. A team built the copy+AI-filter
 idea and ran it live: ~25% win rate, edge eaten by fees. Liquid arbitrage is
@@ -44,19 +58,31 @@ Pure Python standard library, no installs:
 python3 maverick.py        # copy strategy
 python3 scanner.py         # intra-market arb
 python3 scanner_combo.py   # combinatorial arb
+python3 control.py         # random monkey (benchmark)
 ```
 Each writes its own files in `data/` (`*_state.json`, `*_snapshots.json`) so the
-three strategies stay separate and comparable.
+strategies stay separate and comparable.
 
 ## Always-on (free, no Mac left on)
-`.github/workflows/run.yml` runs all three in the cloud every 30 minutes via a
+`.github/workflows/run.yml` runs all four in the cloud every 30 minutes via a
 free GitHub Action and commits each snapshot. The dashboard reads the snapshots.
 Push to GitHub, enable Actions, done.
 
 ## The week-8 gate — NOT now
-Before any real money: UK access is the blocker. Polymarket is geo-restricted;
-a VPN to dodge that can breach their terms and freeze funds, plus UK regulatory
-questions. We do **not** build around that. The paper phase needs none of it —
-public read-only data only.
+Before any real money, two blockers stay unsolved on purpose:
+
+- **UK access.** Polymarket is geo-restricted; a VPN to dodge that can breach
+  their terms and freeze funds, plus UK regulatory questions. We do **not** build
+  around that. The paper phase needs none of it — public read-only data only.
+- **Execution plumbing** (only if we ever go live, documented from research):
+  use the **official Polymarket CLI** (Rust) or a maintained client on **CLOB
+  SDK v2** (v1 order placement is broken); place **post-only limit orders at best
+  bid** (never market-order — taker fees + spread eat the edge); handle
+  **negRisk** markets with their own order path; wire the **approve / preflight /
+  auto-redeem** steps (skip any and orders silently fail or cash stays locked);
+  respect the **5-share (~$4.75) minimum**; keep keys in **environment variables
+  only**, never in the repo or a chat. See `research/SYNTHESIS.md`.
+
+*Not financial advice. A learning tool.*
 
 *Not financial advice. A learning tool.*

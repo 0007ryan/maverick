@@ -26,13 +26,13 @@
   .bakeoff .bar{flex:1;height:8px;background:var(--panel2);border-radius:6px;overflow:hidden}
   .bakeoff .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--violet))}
   .bakeoff b{font-variant-numeric:tabular-nums}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
-  @media(max-width:780px){.grid{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:26px}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;
     position:relative;overflow:hidden}
   .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
   .card.copy:before{background:var(--copy)} .card.intra:before{background:var(--intra)}
-  .card.combo:before{background:var(--combo)}
+  .card.combo:before{background:var(--combo)} .card.control:before{background:var(--amber)}
   .card .name{font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px}
   .card .role{font-size:12px;color:var(--faint);margin-top:2px;min-height:30px}
   .card .equity{font-size:30px;font-weight:600;margin:14px 0 2px;font-variant-numeric:tabular-nums}
@@ -109,9 +109,10 @@ const FILES = {
   copy:  "data/snapshots.json",
   intra: "data/scanner_snapshots.json",
   combo: "data/combo_snapshots.json",
+  control: "data/control_snapshots.json",
   copyState:  "data/state.json",
 };
-const COLORS = {copy:"#58a6ff", intra:"#3fb950", combo:"#bc8cff"};
+const COLORS = {copy:"#58a6ff", intra:"#3fb950", combo:"#bc8cff", control:"#d29922"};
 const START = 1000;
 const FX = 1.27;
 const gbp = n => "£" + (n==null?"—":Number(n).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2}));
@@ -130,7 +131,7 @@ function pnlSpan(v){
 }
 
 function renderCards(data){
-  const copyL = last(data.copy), intraL = last(data.intra), comboL = last(data.combo);
+  const copyL = last(data.copy), intraL = last(data.intra), comboL = last(data.combo), controlL = last(data.control);
   const cards = [
     {k:"copy", name:"Copy bot", role:"maverick.py · follows top 40 by profit, £5 flat",
       eq: copyL? copyL.equity_gbp : START,
@@ -161,6 +162,13 @@ function renderCards(data){
         ["Clear fees", comboL.capturable_gaps],
         ["Locked profit", gbp(comboL.locked_profit_gbp)],
       ] : []},
+    {k:"control", name:"Random control 🐒", role:"control.py · random bets, the benchmark to beat",
+      eq: controlL? controlL.equity_gbp : START,
+      pnl: controlL? controlL.pnl_gbp : 0,
+      stats: controlL? [
+        ["Open positions", controlL.open_positions],
+        ["Random bets", controlL.picks_total],
+      ] : []},
   ];
   document.getElementById("cards").innerHTML = cards.map(c=>`
     <div class="card ${c.k}">
@@ -176,7 +184,7 @@ function renderCards(data){
 }
 
 function renderBakeoff(data){
-  const all = [...(data.copy||[]),...(data.intra||[]),...(data.combo||[])].map(s=>s.ts).filter(Boolean);
+  const all = [...(data.copy||[]),...(data.intra||[]),...(data.combo||[]),...(data.control||[])].map(s=>s.ts).filter(Boolean);
   if(!all.length) return;
   const start = Math.min(...all), nowTs = Math.max(...all, Math.floor(Date.now()/1000));
   const weeks = Math.min(8, (nowTs-start)/(7*86400));
@@ -194,6 +202,7 @@ function renderEquity(data){
     {label:"Copy bot", data:mk(data.copy), color:COLORS.copy},
     {label:"Intra-market arb", data:mk(data.intra), color:COLORS.intra},
     {label:"Combinatorial arb", data:mk(data.combo), color:COLORS.combo},
+    {label:"Random control 🐒", data:mk(data.control), color:COLORS.control},
   ].filter(d=>d.data.length);
   const ctx = document.getElementById("equityChart");
   if(equityChart) equityChart.destroy();
@@ -271,12 +280,12 @@ function renderCopyDetail(state, copyL){
 }
 
 async function init(){
-  const [copy,intra,combo,copyState] = await Promise.all([
-    loadJSON(FILES.copy), loadJSON(FILES.intra), loadJSON(FILES.combo), loadJSON(FILES.copyState)
+  const [copy,intra,combo,control,copyState] = await Promise.all([
+    loadJSON(FILES.copy), loadJSON(FILES.intra), loadJSON(FILES.combo), loadJSON(FILES.control), loadJSON(FILES.copyState)
   ]);
-  const data = {copy:copy||[], intra:intra||[], combo:combo||[]};
-  const anyData = data.copy.length||data.intra.length||data.combo.length;
-  const latestTs = Math.max(0,...[...data.copy,...data.intra,...data.combo].map(s=>s.ts||0));
+  const data = {copy:copy||[], intra:intra||[], combo:combo||[], control:control||[]};
+  const anyData = data.copy.length||data.intra.length||data.combo.length||data.control.length;
+  const latestTs = Math.max(0,...[...data.copy,...data.intra,...data.combo,...data.control].map(s=>s.ts||0));
   document.getElementById("updated").textContent = anyData && latestTs
     ? `Last snapshot: ${new Date(latestTs*1000).toLocaleString("en-GB")} · 8-week bake-off`
     : "No data yet — run python3 maverick.py / scanner.py / scanner_combo.py, or enable the GitHub Action.";
