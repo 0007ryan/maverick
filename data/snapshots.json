@@ -1,0 +1,14 @@
+[
+  {
+    "ts": 1782461802,
+    "iso": "2026-06-26 08:16",
+    "equity_gbp": 999.06,
+    "cash_gbp": 960.0,
+    "positions_gbp": 39.06,
+    "realised_gbp": 0.0,
+    "pnl_gbp": -0.94,
+    "open_positions": 8,
+    "avg_slippage": 0.0138,
+    "copies_total": 8
+  }
+]
