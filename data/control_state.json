@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1079.5,
+  "cash_usd": 1066.8,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.981,
+      "value_usd": 7.09
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.77,
+      "value_usd": 6.03
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -79,8 +79,8 @@
       "entry_price": 0.945,
       "q": "Will Brazil win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.943,
+      "value_usd": 6.34
     },
     "89969054941820905260983372139923320038115693660830083208242956669285748681379": {
       "shares": 7.470588235294118,
@@ -88,8 +88,8 @@
       "entry_price": 0.85,
       "q": "Will Argentina win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.86,
+      "value_usd": 6.42
     },
     "40296626793329341262569925559086532548886624004054207613333294427643418799438": {
       "shares": 11.339285714285712,
@@ -142,7 +142,7 @@
       "entry_price": 0.56,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": null,
+      "last_price": 0.56,
       "value_usd": 6.35
     },
     "89317001622890571024351205511059461850152048349323558355823249554223901402061": {
@@ -169,8 +169,8 @@
       "entry_price": 0.81,
       "q": "Will there be no change in Fed interest rates after the July 2026 meeting?",
       "outcome": "Yes",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.8,
+      "value_usd": 6.27
     },
     "103711573894614472510743687764792452240919804104728889027222697502832804498206": {
       "shares": 6.691253951527924,
@@ -178,8 +178,8 @@
       "entry_price": 0.949,
       "q": "Will Netherlands win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.954,
+      "value_usd": 6.38
     },
     "106929013576622300718402895513457875547556389240247806666273814836599548721421": {
       "shares": 12.450980392156861,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.44,
+      "value_usd": 5.48
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.75,
+      "value_usd": 6.8
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -205,8 +205,8 @@
       "entry_price": 0.58,
       "q": "Will Brazil win on 2026-06-29?",
       "outcome": "Yes",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.57,
+      "value_usd": 6.24
     },
     "19824280012723723060770618573172538135454334061289893638911515188094892588282": {
       "shares": 8.698630136986301,
@@ -214,8 +214,8 @@
       "entry_price": 0.73,
       "q": "Will Colombia win on 2026-06-27?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.71,
+      "value_usd": 6.18
     },
     "54474886969816453525385753955468883023194567537518813967701106946658819435076": {
       "shares": 13.51063829787234,
@@ -223,7 +223,7 @@
       "entry_price": 0.47,
       "q": "Will Algeria vs. Austria end in a draw?",
       "outcome": "Yes",
-      "last_price": null,
+      "last_price": 0.47,
       "value_usd": 6.35
     },
     "82426217538135075249374152998909301325535391519788977704043374374243467368021": {
@@ -232,8 +232,8 @@
       "entry_price": 0.41,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.43,
+      "value_usd": 6.66
     },
     "83119984683216359120344184710305511577201254872158004101959190182937261979933": {
       "shares": 8.355263157894736,
@@ -241,8 +241,8 @@
       "entry_price": 0.76,
       "q": "Will Colombia vs. Portugal end in a draw?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.75,
+      "value_usd": 6.27
     },
     "56817251359545290586223408441496117061772785333531385180310928370685185745580": {
       "shares": 8.355263157894736,
@@ -250,8 +250,8 @@
       "entry_price": 0.76,
       "q": "Will Algeria win on 2026-06-27?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.73,
+      "value_usd": 6.1
     },
     "87073899845581463485186346288398658568334162612963837182986759797304993556208": {
       "shares": 7.215909090909091,
@@ -259,8 +259,8 @@
       "entry_price": 0.88,
       "q": "Putin out as President of Russia by December 31, 2026?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.87,
+      "value_usd": 6.28
     },
     "99643978616642943368192487629382085033508480110188276924611866315281486136550": {
       "shares": 42.333333333333336,
@@ -268,10 +268,28 @@
       "entry_price": 0.15,
       "q": "Will Argentina win on 2026-06-27?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.13,
+      "value_usd": 5.5
+    },
+    "51654339679815880527721963265664149603602326142079038495827149468859705496064": {
+      "shares": 6.978021978021977,
+      "cost_usd": 6.35,
+      "entry_price": 0.91,
+      "q": "Will Jordan vs. Argentina end in a draw?",
+      "outcome": "No",
+      "last_price": 0.9,
+      "value_usd": 6.28
+    },
+    "69263580765140333674971225972030564537957018364662996912888693198064311161962": {
+      "shares": 13.804347826086955,
+      "cost_usd": 6.35,
+      "entry_price": 0.46,
+      "q": "Will Croatia win on 2026-06-27?",
+      "outcome": "No",
+      "last_price": 0.45,
+      "value_usd": 6.21
     }
   },
-  "picks_total": 30,
+  "picks_total": 32,
   "first_run_done": true
 }
