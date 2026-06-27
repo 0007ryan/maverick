@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1104.9,
+  "cash_usd": 1092.2,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.961,
-      "value_usd": 6.95
+      "last_price": 0.967,
+      "value_usd": 6.99
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.782,
-      "value_usd": 6.12
+      "last_price": 0.776,
+      "value_usd": 6.08
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -142,8 +142,8 @@
       "entry_price": 0.56,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.59,
-      "value_usd": 6.69
+      "last_price": 0.58,
+      "value_usd": 6.58
     },
     "89317001622890571024351205511059461850152048349323558355823249554223901402061": {
       "shares": 12.7,
@@ -178,8 +178,8 @@
       "entry_price": 0.949,
       "q": "Will Netherlands win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.951,
-      "value_usd": 6.36
+      "last_price": 0.955,
+      "value_usd": 6.39
     },
     "106929013576622300718402895513457875547556389240247806666273814836599548721421": {
       "shares": 12.450980392156861,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.47,
-      "value_usd": 5.85
+      "last_price": 0.46,
+      "value_usd": 5.73
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -232,10 +232,28 @@
       "entry_price": 0.41,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.4,
-      "value_usd": 6.2
+      "last_price": 0.41,
+      "value_usd": 6.35
+    },
+    "83119984683216359120344184710305511577201254872158004101959190182937261979933": {
+      "shares": 8.355263157894736,
+      "cost_usd": 6.35,
+      "entry_price": 0.76,
+      "q": "Will Colombia vs. Portugal end in a draw?",
+      "outcome": "No",
+      "last_price": 0.75,
+      "value_usd": 6.27
+    },
+    "56817251359545290586223408441496117061772785333531385180310928370685185745580": {
+      "shares": 8.355263157894736,
+      "cost_usd": 6.35,
+      "entry_price": 0.76,
+      "q": "Will Algeria win on 2026-06-27?",
+      "outcome": "No",
+      "last_price": 0.75,
+      "value_usd": 6.27
     }
   },
-  "picks_total": 26,
+  "picks_total": 28,
   "first_run_done": true
 }
