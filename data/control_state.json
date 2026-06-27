@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1117.6,
+  "cash_usd": 1104.9,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.958,
-      "value_usd": 6.93
+      "last_price": 0.961,
+      "value_usd": 6.95
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.783,
-      "value_usd": 6.13
+      "last_price": 0.782,
+      "value_usd": 6.12
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -142,8 +142,8 @@
       "entry_price": 0.56,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.61,
-      "value_usd": 6.92
+      "last_price": 0.59,
+      "value_usd": 6.69
     },
     "89317001622890571024351205511059461850152048349323558355823249554223901402061": {
       "shares": 12.7,
@@ -151,8 +151,8 @@
       "entry_price": 0.5,
       "q": "Dota 2: Power Rangers vs Team Bald - Game 1 Winner",
       "outcome": "Power Rangers",
-      "last_price": 0.49,
-      "value_usd": 6.22
+      "last_price": null,
+      "value_usd": 6.35
     },
     "26569990508696410491447892272390543392383885606267392357555942494960533615950": {
       "shares": 11.545454545454543,
@@ -178,8 +178,8 @@
       "entry_price": 0.949,
       "q": "Will Netherlands win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.953,
-      "value_usd": 6.38
+      "last_price": 0.951,
+      "value_usd": 6.36
     },
     "106929013576622300718402895513457875547556389240247806666273814836599548721421": {
       "shares": 12.450980392156861,
@@ -205,8 +205,8 @@
       "entry_price": 0.58,
       "q": "Will Brazil win on 2026-06-29?",
       "outcome": "Yes",
-      "last_price": 0.57,
-      "value_usd": 6.24
+      "last_price": 0.58,
+      "value_usd": 6.35
     },
     "19824280012723723060770618573172538135454334061289893638911515188094892588282": {
       "shares": 8.698630136986301,
@@ -214,10 +214,28 @@
       "entry_price": 0.73,
       "q": "Will Colombia win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.72,
-      "value_usd": 6.26
+      "last_price": 0.73,
+      "value_usd": 6.35
+    },
+    "54474886969816453525385753955468883023194567537518813967701106946658819435076": {
+      "shares": 13.51063829787234,
+      "cost_usd": 6.35,
+      "entry_price": 0.47,
+      "q": "Will Algeria vs. Austria end in a draw?",
+      "outcome": "Yes",
+      "last_price": 0.46,
+      "value_usd": 6.21
+    },
+    "82426217538135075249374152998909301325535391519788977704043374374243467368021": {
+      "shares": 15.487804878048781,
+      "cost_usd": 6.35,
+      "entry_price": 0.41,
+      "q": "Will DR Congo win on 2026-06-27?",
+      "outcome": "No",
+      "last_price": 0.4,
+      "value_usd": 6.2
     }
   },
-  "picks_total": 24,
+  "picks_total": 26,
   "first_run_done": true
 }
