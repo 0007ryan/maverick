@@ -198,5 +198,15 @@
     "pnl_gbp": -1.54,
     "open_positions": 38,
     "picks_total": 38
+  },
+  {
+    "ts": 1782623127,
+    "iso": "2026-06-28 05:05",
+    "equity_gbp": 999.4,
+    "cash_gbp": 800.0,
+    "positions_gbp": 199.4,
+    "pnl_gbp": -0.6,
+    "open_positions": 40,
+    "picks_total": 40
   }
 ]

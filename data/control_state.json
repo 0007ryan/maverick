@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1028.7,
+  "cash_usd": 1016.0,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.981,
-      "value_usd": 7.09
+      "last_price": 0.986,
+      "value_usd": 7.13
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -88,8 +88,8 @@
       "entry_price": 0.85,
       "q": "Will Argentina win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.86,
-      "value_usd": 6.42
+      "last_price": null,
+      "value_usd": 6.35
     },
     "40296626793329341262569925559086532548886624004054207613333294427643418799438": {
       "shares": 11.339285714285712,
@@ -142,8 +142,8 @@
       "entry_price": 0.56,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.23,
-      "value_usd": 2.61
+      "last_price": null,
+      "value_usd": 6.35
     },
     "89317001622890571024351205511059461850152048349323558355823249554223901402061": {
       "shares": 12.7,
@@ -169,8 +169,8 @@
       "entry_price": 0.81,
       "q": "Will there be no change in Fed interest rates after the July 2026 meeting?",
       "outcome": "Yes",
-      "last_price": 0.8,
-      "value_usd": 6.27
+      "last_price": 0.81,
+      "value_usd": 6.35
     },
     "103711573894614472510743687764792452240919804104728889027222697502832804498206": {
       "shares": 6.691253951527924,
@@ -178,8 +178,8 @@
       "entry_price": 0.949,
       "q": "Will Netherlands win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.952,
-      "value_usd": 6.37
+      "last_price": 0.957,
+      "value_usd": 6.4
     },
     "106929013576622300718402895513457875547556389240247806666273814836599548721421": {
       "shares": 12.450980392156861,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.4,
-      "value_usd": 4.98
+      "last_price": 0.34,
+      "value_usd": 4.23
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.81,
-      "value_usd": 7.35
+      "last_price": 0.87,
+      "value_usd": 7.89
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -214,8 +214,8 @@
       "entry_price": 0.73,
       "q": "Will Colombia win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.72,
-      "value_usd": 6.26
+      "last_price": null,
+      "value_usd": 6.35
     },
     "54474886969816453525385753955468883023194567537518813967701106946658819435076": {
       "shares": 13.51063829787234,
@@ -223,8 +223,8 @@
       "entry_price": 0.47,
       "q": "Will Algeria vs. Austria end in a draw?",
       "outcome": "Yes",
-      "last_price": 0.46,
-      "value_usd": 6.21
+      "last_price": null,
+      "value_usd": 6.35
     },
     "82426217538135075249374152998909301325535391519788977704043374374243467368021": {
       "shares": 15.487804878048781,
@@ -232,8 +232,8 @@
       "entry_price": 0.41,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.76,
-      "value_usd": 11.77
+      "last_price": null,
+      "value_usd": 6.35
     },
     "83119984683216359120344184710305511577201254872158004101959190182937261979933": {
       "shares": 8.355263157894736,
@@ -241,8 +241,8 @@
       "entry_price": 0.76,
       "q": "Will Colombia vs. Portugal end in a draw?",
       "outcome": "No",
-      "last_price": 0.71,
-      "value_usd": 5.93
+      "last_price": null,
+      "value_usd": 6.35
     },
     "56817251359545290586223408441496117061772785333531385180310928370685185745580": {
       "shares": 8.355263157894736,
@@ -250,8 +250,8 @@
       "entry_price": 0.76,
       "q": "Will Algeria win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.72,
-      "value_usd": 6.02
+      "last_price": null,
+      "value_usd": 6.35
     },
     "87073899845581463485186346288398658568334162612963837182986759797304993556208": {
       "shares": 7.215909090909091,
@@ -268,8 +268,8 @@
       "entry_price": 0.15,
       "q": "Will Argentina win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.13,
-      "value_usd": 5.5
+      "last_price": null,
+      "value_usd": 6.35
     },
     "51654339679815880527721963265664149603602326142079038495827149468859705496064": {
       "shares": 6.978021978021977,
@@ -277,8 +277,8 @@
       "entry_price": 0.91,
       "q": "Will Jordan vs. Argentina end in a draw?",
       "outcome": "No",
-      "last_price": 0.9,
-      "value_usd": 6.28
+      "last_price": null,
+      "value_usd": 6.35
     },
     "69263580765140333674971225972030564537957018364662996912888693198064311161962": {
       "shares": 13.804347826086955,
@@ -295,8 +295,8 @@
       "entry_price": 0.48,
       "q": "Will Portugal win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.43,
-      "value_usd": 5.69
+      "last_price": null,
+      "value_usd": 6.35
     },
     "27576533317283401577758999384642760405921738493660383550832555714312627457443": {
       "shares": 111.40350877192981,
@@ -322,8 +322,8 @@
       "entry_price": 0.77,
       "q": "Exact Score: Algeria 0 - 0 Austria?",
       "outcome": "No",
-      "last_price": 0.76,
-      "value_usd": 6.27
+      "last_price": null,
+      "value_usd": 6.35
     },
     "102367407023343166765637511624602399041527965967149053637016064081685302310431": {
       "shares": 15.119047619047619,
@@ -331,8 +331,8 @@
       "entry_price": 0.42,
       "q": "Colombia vs. Portugal: O/U 1.5",
       "outcome": "Under",
-      "last_price": 0.38,
-      "value_usd": 5.75
+      "last_price": null,
+      "value_usd": 6.35
     },
     "46414274828479915290926752574383552073416575769862451112588694597094950618374": {
       "shares": 9.071428571428571,
@@ -340,10 +340,28 @@
       "entry_price": 0.7,
       "q": "Colombia vs. Portugal: O/U 2.5",
       "outcome": "Under",
-      "last_price": 0.69,
+      "last_price": null,
+      "value_usd": 6.35
+    },
+    "102894855985692555532904127073544596800300556071376197346976065799709524987460": {
+      "shares": 24.42307692307692,
+      "cost_usd": 6.35,
+      "entry_price": 0.26,
+      "q": "Will Brazil vs. Japan end in a draw?",
+      "outcome": "Yes",
+      "last_price": 0.25,
+      "value_usd": 6.11
+    },
+    "71338886078132794561606040245522732654223397726318877516126885558857760131397": {
+      "shares": 9.477611940298507,
+      "cost_usd": 6.35,
+      "entry_price": 0.67,
+      "q": "UFC 329: Max Holloway vs. Conor McGregor (Welterweight, Main Card)",
+      "outcome": "Max Holloway",
+      "last_price": 0.66,
       "value_usd": 6.26
     }
   },
-  "picks_total": 38,
+  "picks_total": 40,
   "first_run_done": true
 }
