@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.987,
-      "value_usd": 7.14
+      "last_price": 0.99,
+      "value_usd": 7.16
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.44,
-      "value_usd": 5.48
+      "last_price": 0.42,
+      "value_usd": 5.23
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -259,8 +259,8 @@
       "entry_price": 0.88,
       "q": "Putin out as President of Russia by December 31, 2026?",
       "outcome": "No",
-      "last_price": 0.87,
-      "value_usd": 6.28
+      "last_price": 0.88,
+      "value_usd": 6.35
     },
     "99643978616642943368192487629382085033508480110188276924611866315281486136550": {
       "shares": 42.333333333333336,
@@ -376,8 +376,8 @@
       "entry_price": 0.88,
       "q": "Exact Score: South Africa 1 - 1 Canada?",
       "outcome": "No",
-      "last_price": 0.999,
-      "value_usd": 7.21
+      "last_price": null,
+      "value_usd": 6.35
     },
     "89075579425844467185868633488322759623361856543369509366205030098390192743019": {
       "shares": 48.84615384615384,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": 0.093,
-      "value_usd": 9.52
+      "last_price": 0.12,
+      "value_usd": 12.29
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
@@ -412,8 +412,8 @@
       "entry_price": 0.57,
       "q": "South Africa vs. Canada: O/U 2.5",
       "outcome": "Under",
-      "last_price": 0.999,
-      "value_usd": 11.13
+      "last_price": null,
+      "value_usd": 6.35
     },
     "31940783580344558651011323787577288681658737625185216525249046282994042503801": {
       "shares": 6.740976645435244,
@@ -439,8 +439,8 @@
       "entry_price": 0.42,
       "q": "South Africa vs. Canada: O/U 2.5",
       "outcome": "Over",
-      "last_price": 0.0,
-      "value_usd": 0.0
+      "last_price": null,
+      "value_usd": 6.35
     },
     "40789634509720753537744583215158810500689355512680317697704779871684105258170": {
       "shares": 39.6875,
@@ -448,8 +448,8 @@
       "entry_price": 0.16,
       "q": "Will South Africa win on 2026-06-28?",
       "outcome": "Yes",
-      "last_price": 0.0,
-      "value_usd": 0.0
+      "last_price": null,
+      "value_usd": 6.35
     }
   },
   "picks_total": 50,
