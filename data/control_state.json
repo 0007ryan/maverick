@@ -1,5 +1,5 @@
 {
-  "cash_usd": 1041.4,
+  "cash_usd": 1028.7,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.983,
-      "value_usd": 7.11
+      "last_price": 0.981,
+      "value_usd": 7.09
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -142,8 +142,8 @@
       "entry_price": 0.56,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.58,
-      "value_usd": 6.58
+      "last_price": 0.23,
+      "value_usd": 2.61
     },
     "89317001622890571024351205511059461850152048349323558355823249554223901402061": {
       "shares": 12.7,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.42,
-      "value_usd": 5.23
+      "last_price": 0.4,
+      "value_usd": 4.98
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.79,
-      "value_usd": 7.17
+      "last_price": 0.81,
+      "value_usd": 7.35
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -214,8 +214,8 @@
       "entry_price": 0.73,
       "q": "Will Colombia win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.74,
-      "value_usd": 6.44
+      "last_price": 0.72,
+      "value_usd": 6.26
     },
     "54474886969816453525385753955468883023194567537518813967701106946658819435076": {
       "shares": 13.51063829787234,
@@ -232,8 +232,8 @@
       "entry_price": 0.41,
       "q": "Will DR Congo win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.41,
-      "value_usd": 6.35
+      "last_price": 0.76,
+      "value_usd": 11.77
     },
     "83119984683216359120344184710305511577201254872158004101959190182937261979933": {
       "shares": 8.355263157894736,
@@ -241,8 +241,8 @@
       "entry_price": 0.76,
       "q": "Will Colombia vs. Portugal end in a draw?",
       "outcome": "No",
-      "last_price": 0.76,
-      "value_usd": 6.35
+      "last_price": 0.71,
+      "value_usd": 5.93
     },
     "56817251359545290586223408441496117061772785333531385180310928370685185745580": {
       "shares": 8.355263157894736,
@@ -286,8 +286,8 @@
       "entry_price": 0.46,
       "q": "Will Croatia win on 2026-06-27?",
       "outcome": "No",
-      "last_price": 0.73,
-      "value_usd": 10.08
+      "last_price": null,
+      "value_usd": 6.35
     },
     "68238163315667435120694805573568977252273759352712823951184501420027891362809": {
       "shares": 13.229166666666666,
@@ -295,8 +295,8 @@
       "entry_price": 0.48,
       "q": "Will Portugal win on 2026-06-27?",
       "outcome": "Yes",
-      "last_price": 0.51,
-      "value_usd": 6.75
+      "last_price": 0.43,
+      "value_usd": 5.69
     },
     "27576533317283401577758999384642760405921738493660383550832555714312627457443": {
       "shares": 111.40350877192981,
@@ -313,8 +313,8 @@
       "entry_price": 0.82,
       "q": "Cincinnati Reds vs. Pittsburgh Pirates",
       "outcome": "Cincinnati Reds",
-      "last_price": 0.81,
-      "value_usd": 6.27
+      "last_price": null,
+      "value_usd": 6.35
     },
     "31592189180796670149538332983312798729848457918546910122577925537993865785264": {
       "shares": 8.246753246753245,
@@ -324,8 +324,26 @@
       "outcome": "No",
       "last_price": 0.76,
       "value_usd": 6.27
+    },
+    "102367407023343166765637511624602399041527965967149053637016064081685302310431": {
+      "shares": 15.119047619047619,
+      "cost_usd": 6.35,
+      "entry_price": 0.42,
+      "q": "Colombia vs. Portugal: O/U 1.5",
+      "outcome": "Under",
+      "last_price": 0.38,
+      "value_usd": 5.75
+    },
+    "46414274828479915290926752574383552073416575769862451112588694597094950618374": {
+      "shares": 9.071428571428571,
+      "cost_usd": 6.35,
+      "entry_price": 0.7,
+      "q": "Colombia vs. Portugal: O/U 2.5",
+      "outcome": "Under",
+      "last_price": 0.69,
+      "value_usd": 6.26
     }
   },
-  "picks_total": 36,
+  "picks_total": 38,
   "first_run_done": true
 }
