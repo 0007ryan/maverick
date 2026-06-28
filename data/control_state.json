@@ -1,5 +1,5 @@
 {
-  "cash_usd": 977.9,
+  "cash_usd": 965.2,
   "positions": {
     "77669758102929718590160851391714019116736856202333459817343190730743895177270": {
       "shares": 7.232346241457859,
@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.987,
-      "value_usd": 7.14
+      "last_price": 0.989,
+      "value_usd": 7.15
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.35,
-      "value_usd": 4.36
+      "last_price": 0.34,
+      "value_usd": 4.23
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -376,8 +376,8 @@
       "entry_price": 0.88,
       "q": "Exact Score: South Africa 1 - 1 Canada?",
       "outcome": "No",
-      "last_price": 0.87,
-      "value_usd": 6.28
+      "last_price": 0.86,
+      "value_usd": 6.21
     },
     "89075579425844467185868633488322759623361856543369509366205030098390192743019": {
       "shares": 48.84615384615384,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": 0.056,
-      "value_usd": 5.74
+      "last_price": 0.064,
+      "value_usd": 6.55
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
@@ -412,10 +412,28 @@
       "entry_price": 0.57,
       "q": "South Africa vs. Canada: O/U 2.5",
       "outcome": "Under",
-      "last_price": 0.56,
-      "value_usd": 6.24
+      "last_price": 0.57,
+      "value_usd": 6.35
+    },
+    "31940783580344558651011323787577288681658737625185216525249046282994042503801": {
+      "shares": 6.740976645435244,
+      "cost_usd": 6.35,
+      "entry_price": 0.942,
+      "q": "Will Portugal win the 2026 FIFA World Cup?",
+      "outcome": "No",
+      "last_price": 0.941,
+      "value_usd": 6.34
+    },
+    "4633569295739345295929299496370398790000429459208303788658430774702495448690": {
+      "shares": 8.819444444444445,
+      "cost_usd": 6.35,
+      "entry_price": 0.72,
+      "q": "Will United States win on 2026-07-01?",
+      "outcome": "Yes",
+      "last_price": 0.71,
+      "value_usd": 6.26
     }
   },
-  "picks_total": 46,
+  "picks_total": 48,
   "first_run_done": true
 }
