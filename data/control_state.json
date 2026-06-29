@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.992,
-      "value_usd": 7.17
+      "last_price": 0.993,
+      "value_usd": 7.18
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.77,
-      "value_usd": 6.03
+      "last_price": 0.769,
+      "value_usd": 6.02
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -178,8 +178,8 @@
       "entry_price": 0.949,
       "q": "Will Netherlands win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.949,
-      "value_usd": 6.35
+      "last_price": 0.951,
+      "value_usd": 6.36
     },
     "106929013576622300718402895513457875547556389240247806666273814836599548721421": {
       "shares": 12.450980392156861,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.83,
-      "value_usd": 7.53
+      "last_price": 0.85,
+      "value_usd": 7.71
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -385,8 +385,8 @@
       "entry_price": 0.13,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "Yes",
-      "last_price": 0.16,
-      "value_usd": 7.82
+      "last_price": 0.14,
+      "value_usd": 6.84
     },
     "67468426477709602554310208148215284365777653659253739974001179907439821099486": {
       "shares": 102.41935483870967,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": 0.017,
-      "value_usd": 1.74
+      "last_price": 0.014,
+      "value_usd": 1.43
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
@@ -403,8 +403,8 @@
       "entry_price": 0.74,
       "q": "Will Germany win on 2026-06-29?",
       "outcome": "Yes",
-      "last_price": 0.55,
-      "value_usd": 4.72
+      "last_price": 0.0,
+      "value_usd": 0.0
     },
     "110703694895270228942832579480803813367688034779077884286056610130264274729875": {
       "shares": 11.140350877192983,
