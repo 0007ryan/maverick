@@ -7,7 +7,7 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.991,
+      "last_price": 0.992,
       "value_usd": 7.17
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.765,
-      "value_usd": 5.99
+      "last_price": 0.77,
+      "value_usd": 6.03
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": 0.013,
-      "value_usd": 1.33
+      "last_price": 0.017,
+      "value_usd": 1.74
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
@@ -403,8 +403,8 @@
       "entry_price": 0.74,
       "q": "Will Germany win on 2026-06-29?",
       "outcome": "Yes",
-      "last_price": 0.73,
-      "value_usd": 6.26
+      "last_price": 0.55,
+      "value_usd": 4.72
     },
     "110703694895270228942832579480803813367688034779077884286056610130264274729875": {
       "shares": 11.140350877192983,
