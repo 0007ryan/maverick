@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.678,
-      "value_usd": 5.31
+      "last_price": 0.672,
+      "value_usd": 5.26
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.32,
-      "value_usd": 3.98
+      "last_price": 0.3,
+      "value_usd": 3.74
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -367,8 +367,8 @@
       "entry_price": 0.08,
       "q": "Will Sweden win on 2026-06-30?",
       "outcome": "Yes",
-      "last_price": 0.0,
-      "value_usd": 0.0
+      "last_price": null,
+      "value_usd": 6.35
     },
     "89920788915587622638719400903227378349066922433508144784201989624303902466039": {
       "shares": 7.215909090909091,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": 0.002,
-      "value_usd": 0.2
+      "last_price": 0.001,
+      "value_usd": 0.1
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
@@ -430,8 +430,8 @@
       "entry_price": 0.72,
       "q": "Will United States win on 2026-07-01?",
       "outcome": "Yes",
-      "last_price": 0.71,
-      "value_usd": 6.26
+      "last_price": 0.7,
+      "value_usd": 6.17
     },
     "24964355059471658218534430907358234193213475323885874902384829516286249548719": {
       "shares": 15.119047619047619,
