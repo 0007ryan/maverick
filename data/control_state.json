@@ -7,8 +7,8 @@
       "entry_price": 0.878,
       "q": "Strait of Hormuz traffic returns to normal by end of June?",
       "outcome": "No",
-      "last_price": 0.998,
-      "value_usd": 7.22
+      "last_price": 0.999,
+      "value_usd": 7.23
     },
     "102151903352348177456257167929051471434991046309446484395552225888411879435517": {
       "shares": 18.142857142857142,
@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.652,
-      "value_usd": 5.11
+      "last_price": 0.67,
+      "value_usd": 5.25
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.15,
-      "value_usd": 1.87
+      "last_price": 0.14,
+      "value_usd": 1.74
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.962,
-      "value_usd": 8.73
+      "last_price": 0.981,
+      "value_usd": 8.9
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -385,8 +385,8 @@
       "entry_price": 0.13,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "Yes",
-      "last_price": 0.037,
-      "value_usd": 1.81
+      "last_price": 0.018,
+      "value_usd": 0.88
     },
     "67468426477709602554310208148215284365777653659253739974001179907439821099486": {
       "shares": 102.41935483870967,
@@ -421,8 +421,8 @@
       "entry_price": 0.942,
       "q": "Will Portugal win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.942,
-      "value_usd": 6.35
+      "last_price": 0.941,
+      "value_usd": 6.34
     },
     "4633569295739345295929299496370398790000429459208303788658430774702495448690": {
       "shares": 8.819444444444445,
