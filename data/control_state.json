@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.67,
-      "value_usd": 5.25
+      "last_price": 0.672,
+      "value_usd": 5.26
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.989,
-      "value_usd": 8.97
+      "last_price": 0.988,
+      "value_usd": 8.96
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -385,8 +385,8 @@
       "entry_price": 0.13,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "Yes",
-      "last_price": 0.01,
-      "value_usd": 0.49
+      "last_price": 0.011,
+      "value_usd": 0.54
     },
     "67468426477709602554310208148215284365777653659253739974001179907439821099486": {
       "shares": 102.41935483870967,
