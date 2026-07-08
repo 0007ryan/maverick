@@ -34,8 +34,8 @@
       "entry_price": 0.811,
       "q": "Will France win the 2026 FIFA World Cup?",
       "outcome": "No",
-      "last_price": 0.666,
-      "value_usd": 5.21
+      "last_price": 0.672,
+      "value_usd": 5.26
     },
     "24890562822682113388842684738543995708286443005319485498967389986389360931586": {
       "shares": 46.350364963503644,
@@ -169,8 +169,8 @@
       "entry_price": 0.81,
       "q": "Will there be no change in Fed interest rates after the July 2026 meeting?",
       "outcome": "Yes",
-      "last_price": 0.81,
-      "value_usd": 6.35
+      "last_price": 0.78,
+      "value_usd": 6.11
     },
     "103711573894614472510743687764792452240919804104728889027222697502832804498206": {
       "shares": 6.691253951527924,
@@ -358,8 +358,8 @@
       "entry_price": 0.67,
       "q": "UFC 329: Max Holloway vs. Conor McGregor (Welterweight, Main Card)",
       "outcome": "Max Holloway",
-      "last_price": 0.66,
-      "value_usd": 6.26
+      "last_price": 0.65,
+      "value_usd": 6.16
     },
     "25101538316218147237997334564668091438563238337349407159868389076062854560259": {
       "shares": 79.375,
