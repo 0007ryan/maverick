@@ -196,8 +196,8 @@
       "entry_price": 0.7,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "No",
-      "last_price": 0.995,
-      "value_usd": 9.03
+      "last_price": 0.994,
+      "value_usd": 9.02
     },
     "57092323451811073429818608596571079688057106582430141952397837549265655050698": {
       "shares": 10.948275862068966,
@@ -385,8 +385,8 @@
       "entry_price": 0.13,
       "q": "Strait of Hormuz traffic returns to normal by July 15?",
       "outcome": "Yes",
-      "last_price": 0.004,
-      "value_usd": 0.2
+      "last_price": 0.005,
+      "value_usd": 0.24
     },
     "67468426477709602554310208148215284365777653659253739974001179907439821099486": {
       "shares": 102.41935483870967,
