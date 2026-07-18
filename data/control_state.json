@@ -187,8 +187,8 @@
       "entry_price": 0.51,
       "q": "Strait of Hormuz traffic returns to normal by July 31?",
       "outcome": "Yes",
-      "last_price": 0.011,
-      "value_usd": 0.14
+      "last_price": 0.012,
+      "value_usd": 0.15
     },
     "71279521496039829536704041318414999273049358723733201938586896590878069795154": {
       "shares": 9.071428571428571,
@@ -259,8 +259,8 @@
       "entry_price": 0.88,
       "q": "Putin out as President of Russia by December 31, 2026?",
       "outcome": "No",
-      "last_price": 0.9,
-      "value_usd": 6.49
+      "last_price": 0.91,
+      "value_usd": 6.57
     },
     "99643978616642943368192487629382085033508480110188276924611866315281486136550": {
       "shares": 42.333333333333336,
