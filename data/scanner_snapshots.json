@@ -2734,5 +2734,14 @@
     "capturable_gaps": 0,
     "locked_profit_gbp": 1.14,
     "equity_gbp": 1001.14
+  },
+  {
+    "ts": 1784828241,
+    "iso": "2026-07-23 17:37",
+    "scanned": 100,
+    "theoretical_gaps": 0,
+    "capturable_gaps": 0,
+    "locked_profit_gbp": 1.14,
+    "equity_gbp": 1001.14
   }
 ]
