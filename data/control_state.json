@@ -259,8 +259,8 @@
       "entry_price": 0.88,
       "q": "Putin out as President of Russia by December 31, 2026?",
       "outcome": "No",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.93,
+      "value_usd": 6.71
     },
     "99643978616642943368192487629382085033508480110188276924611866315281486136550": {
       "shares": 42.333333333333336,
@@ -394,8 +394,8 @@
       "entry_price": 0.062,
       "q": "Will Bitcoin dip to $55,000 in June?",
       "outcome": "Yes",
-      "last_price": null,
-      "value_usd": 6.35
+      "last_price": 0.0,
+      "value_usd": 0.0
     },
     "105955641798220222973109187224574301257632160324818588692950982681479970305564": {
       "shares": 8.58108108108108,
